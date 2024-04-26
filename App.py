@@ -1,3 +1,4 @@
+# installing all the packages used at the end
 import streamlit as st
 import pickle
 import string
@@ -8,7 +9,7 @@ from nltk.stem import PorterStemmer
 ps=PorterStemmer()
 
 
-
+# a function used to describe and make the site
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
@@ -32,6 +33,7 @@ def transform_text(text):
         y.append(ps.stem(i))
 
     return "".join(y)
+# pickle used to convert into nyte stream
 
 tfidf=pickle.loads(open("vectorizer.pk1","rb"))
 model=pickle.load(open("model.pkl",'rb'))
