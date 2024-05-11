@@ -1,4 +1,4 @@
-
+# importing flask and pickle module
 
 from flask import Flask, render_template, request, jsonify
 import pickle
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load the trained model and vectorizer
 with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+    model = pickle.load(f)# loading the module
 with open('vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
 
@@ -25,7 +25,7 @@ def predict_spam():
     email_text = request.form['email_text']
 
     # Convert the text into numerical features using the trained vectorizer
-    X_test = vectorizer.transform([email_text])
+    X_test = vectorizer.transform([email_text])# training the dataset
 
     # Predict the spam probability using the trained model
     spam_probability = model.predict_proba(X_test)[:, 1].item()
