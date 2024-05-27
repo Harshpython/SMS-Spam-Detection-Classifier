@@ -7,11 +7,10 @@ This project is a spam email classifier built using the Naive Bayes algorithm. T
 
 
  Features
-
-- Classify emails as spam or ham.
-- User-friendly web interface developed using Flask.
-- Uses the Naive Bayes algorithm for classification.
-- Simple and intuitive design.
+ Classify emails as spam or ham.
+ User-friendly web interface developed using Flask.
+ Uses the Naive Bayes algorithm for classification.
+ Simple and intuitive design.
 
 
 
