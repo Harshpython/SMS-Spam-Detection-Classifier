@@ -1,3 +1,4 @@
+# importing all the necessary libraries
 import streamlit as st
 import pickle
 import string
@@ -14,8 +15,8 @@ def transform_text(text):
 
     y = []
     for i in text:
-        if i.isalnum():
-            y.append(i)
+        if i.isalnum():# is alpha numaric
+            y.append(i)#add function at the end
 
     text = y[:]
     y.clear()
@@ -34,7 +35,7 @@ def transform_text(text):
 
 # Load the model and vectorizer
 with open("model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+    model = pickle.load(model_file)# pickel module
 
 with open("vectorizer.pkl", "rb") as vec_file:
     tfidf = pickle.load(vec_file)
